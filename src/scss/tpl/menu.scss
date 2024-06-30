@@ -1,0 +1,39 @@
+
+
+
+
+.menu-list {
+  display: flex;
+  flex-direction: row;
+  width: 285px;
+  justify-content: space-between;
+}
+
+
+.menu-link {
+  position: relative;
+  font-weight: 500;
+  text-decoration: none;
+  color: var(--white);
+  transition: color 0.3s ease, opacity 0.3s ease;
+  font-size: 28px;
+  line-height: 45px;
+
+  &:before {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: var(--smoky-white);
+    transition: width 0.3s ease;
+  }
+
+  &:hover {
+    font-weight: 700;
+    &:before {
+      width: 100%;
+    }
+  }
+}

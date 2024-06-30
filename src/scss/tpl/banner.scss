@@ -1,0 +1,134 @@
+.banner {
+  background: var(--banner-bg);
+  position: relative;
+  padding: 0 15px;
+  margin-bottom: 40px;
+  z-index: 0;
+
+  @media (min-width: 768px) {
+    padding: 0 50px;
+  }
+}
+
+.banner__item {
+  width: 100%;
+  margin: 0 auto;
+  padding: 52px 0 66px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @media (min-width: 768px) {
+    width: 756px;
+    flex-direction: row;
+  }
+
+  .open-modal-button {
+    margin-top: 32px;
+
+    @media (min-width: 768px) {
+      margin-top: 0;
+      margin-left: 32px;
+    }
+  }
+}
+
+.banner__item-info {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 158px;
+  justify-content: space-between;
+
+}
+
+.banner__item-text {
+  font-weight: 700;
+  font-size: 45px;
+  line-height: 45px;
+  color: var(--white);
+}
+
+
+.banner__item-title {
+  font-weight: 700;
+  font-size: 45px;
+  line-height: 45px;
+  color: var(--white);
+}
+
+
+.banner {
+  .owl-nav {
+    position: absolute;
+    top: 29%;
+    left: 4px;
+    width: 99%;
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
+    z-index: -1;
+  }
+  .owl-item {
+    margin: 0!important;
+  }
+
+  .owl-carousel.owl-loaded {
+
+    @media (min-width: 768px) {
+      padding:  0 100px 0 100px;
+    }
+  }
+
+  .owl-carousel .owl-nav .owl-prev,
+  .owl-carousel .owl-nav .owl-next,
+  .owl-carousel .owl-dot {
+    width:30px;
+    height:30px;
+  }
+  .owl-carousel .owl-nav .owl-prev{
+    display: inline-block;
+    border-top: 60px solid var(--white);
+    border-left: 60px solid transparent;
+    position: relative;
+    rotate: -135deg;
+    &:after {
+      content: "";
+      display: inline-block;
+      position: absolute;
+      background: transparent;
+      top: -56px;
+      left: -59px;
+      border-top: 63px solid var(--banner-bg);
+
+      border-left: 55px solid var(--banner-bg);
+    }
+    &:hover {
+      background: transparent;
+    }
+
+  }
+  .owl-carousel .owl-nav .owl-next{
+    display: inline-block;
+    border-top: 60px solid var(--white);
+    border-left: 60px solid transparent;
+    position: relative;
+    rotate: 45deg;
+    &:after {
+      content: "";
+      display: inline-block;
+      position: absolute;
+      background: transparent;
+      top: -56px;
+      left: -59px;
+      border-top: 63px solid var(--banner-bg);
+
+      border-left: 55px solid var(--banner-bg);
+    }
+    &:hover {
+      background: transparent;
+    }
+  }
+
+}
+

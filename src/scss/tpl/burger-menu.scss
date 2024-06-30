@@ -1,0 +1,28 @@
+.burger-menu {
+  display: inline-block;
+  cursor: pointer;
+  z-index: 1;
+  margin: 0 0 0 auto;
+  @media (min-width: 768px) {
+    display: none;
+  }
+  
+}
+.burger-menu span {
+  display: block;
+  width: 43px;
+  height: 3px;
+  margin-bottom: 9px;
+  position: relative;
+  background: var(--white);
+  transition: transform 0.4s ;
+}
+.burger-menu.active span:nth-child(1) {
+  transform: translateY(8px) rotate(30deg);
+}
+.burger-menu.active span:nth-child(2) {
+  opacity: 0;
+}
+.burger-menu.active span:nth-child(3) {
+  transform: translateY(-16px) rotate(-30deg);
+}
